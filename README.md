@@ -1,2 +1,2 @@
 # reactbot
-just for a friend
+just for a friend lol
