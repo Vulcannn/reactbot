@@ -25,7 +25,7 @@ async def on_message(message):
 @client.event
 async def on_message(message):
     if message.content('?'): #if message.content.startswith 
-        msg = await client.send_message(message.channel, 'React with thumbs up or thumbs down.')
+        msg = await client.send_message(message.channel, 'React with the thumbs up, cross and thumbs down emoji.')
         res = await client.wait_for_reaction(['👍','❌','👎'], message=msg)
         await client.send_message(message.channel, '{0.user} reacted with {0.reaction.emoji}!'.format(res))
     
