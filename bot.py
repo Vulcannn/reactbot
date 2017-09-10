@@ -21,10 +21,17 @@ async def on_message(message):
     if message.content.startswith('-test'):
         msg = 'I am online and working, {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
+        
+@client.event
+async def on_message(message):
+    if message.content('?'): #if message.content.startswith 
+        msg = await client.send_message(message.channel, 'React with thumbs up or thumbs down.')
+        res = await client.wait_for_reaction(['👍','❌','👎'], message=msg)
+        await client.send_message(message.channel, '{0.user} reacted with {0.reaction.emoji}!'.format(res))
     
 
     
     
     
     
-client.start(token)
+client.run(token)
