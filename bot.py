@@ -12,6 +12,15 @@ async def on_ready():
     print('Bot User ID:', client.user.id)
     print('---------------------------------------------')
     
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('-test'):
+        msg = 'I am online and working, {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+    
 
     
     
