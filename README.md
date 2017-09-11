@@ -4,9 +4,13 @@
 
 Made for a friend.
 
-#Requirements
+# Requirements
 Python 3.5
 
-#How To Run
+# How To Run
 
-Replace 'token' with  your bots token 
+Replace 'token' with  your bots token (line 5)
+
+Make sure you have discord.py by running the following command in your cmd prompt `pip install discord.py` (Make sure you added python too path or it wont be able to install. 
+
+Run bot.py
